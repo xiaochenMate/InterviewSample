@@ -1,13 +1,15 @@
 	
 整理了最新的Adroid面试题，持续更新中...
 =======================================
+[我的博客](https://blog.csdn.net/a458339341)  
+----------------------------------------------
 主要分为以下几部分：	
 -------------------------
-<br>  （1）java面试题
-<br>  （2）Android面试题
-<br>  （3）混合开发面试题
-<br>  （4）高端技术面试题
-<br>  （5）非技术性问题&HR问题汇总
+	（1）java面试题
+	（2）Android面试题
+	（3）混合开发面试题
+	（4）高端技术面试题
+	（5）非技术性问题&HR问题汇总
  
  
 <br> 一、java面试题
@@ -147,89 +149,89 @@ parseInt(string str,10)方法,默认基数为10，parseInt内部首先
 在这个方法中，函数肯定进入到0-9字符的判断（相对于string转换到int）， 
 否则会抛出异常，数字就是如上面进行拼接然后生成的int类型数值。
 
-原文：https://blog.csdn.net/itboy_libing/article/details/80393530 
+<br><br>原文：https://blog.csdn.net/itboy_libing/article/details/80393530 
 
  
-（二） java深入源码级的面试题（有难度）
+<br>（二） java深入源码级的面试题（有难度）
  
-ü 哪些情况下的对象会被垃圾回收机制处理掉？
-. 引用计数法
-当有一个引用指向对象的时候counter就加一，当不在引用此对象时就让counter减一。所以，当counter等于零的时候虚拟机就认为此对象时可以被回收的
+<br>ü 哪些情况下的对象会被垃圾回收机制处理掉？
+<br>. 引用计数法
+<br>当有一个引用指向对象的时候counter就加一，当不在引用此对象时就让counter减一。所以，当counter等于零的时候虚拟机就认为此对象时可以被回收的
 . 可达性分析算法
-虚拟机会先将一些对象定义为GC Roots，从GC Roots出发一直沿着引用链向下寻找，如果某个对象不能通过GC Roots寻找到，那么虚拟机就认为该对象可以被回收。
-ü 讲一下常见编码方式？
-ASCII码：共有128个，用一个字节的低7位表示
- ISO8859-1：在ASCII码的基础上涵盖了大多数西欧语言字符，仍然是单字节编码，它总共能表示256个字符 
-GB2312：全称为《信息交换用汉字编码字符集基本集》，它是双字节编码，总的编码范围是A1~F7 A1~A9 ·符号区 B0~F7 汉字区 
-GBK：《数字交换用汉字编码字符集》，它可能是单字节、双字节或者四字节编码，与GB2312编码兼容 
-UTF-16：具体定义了Unicode字符在计算机中的存取方法。采用2字节来表示Unicode转化格式，它是定长的表示方法，不论什么字符都可以用两个字节表示
- UTF-8： UTF-8采用一种变长技术，每个编码区域有不同的字码长度，不同的字符可以由1~6个字节组成。 如果一个字节，最高位为0，表示这是一个ASCII字符（00~7F） 如果一个字节，以11开头，连续的1的个数暗示这个字符的字节数
-链接：https://www.jianshu.com/p/54a3b6988368
-ü utf-8编码中的中文占几个字节；int型几个字节？
-utf-8的编码规则：
-如果一个字节，最高位为0，表示这是一个ASCII字符（00~7F）
-如果一个字节，以11开头，连续的1的个数暗示这个字符的字节数
-一个utf8数字占1个字节
-一个utf8英文字母占1个字节
+<br>虚拟机会先将一些对象定义为GC Roots，从GC Roots出发一直沿着引用链向下寻找，如果某个对象不能通过GC Roots寻找到，那么虚拟机就认为该对象可以被回收。
+<br>ü 讲一下常见编码方式？
+<br>ASCII码：共有128个，用一个字节的低7位表示
+<br> ISO8859-1：在ASCII码的基础上涵盖了大多数西欧语言字符，仍然是单字节编码，它总共能表示256个字符 
+<br>GB2312：全称为《信息交换用汉字编码字符集基本集》，它是双字节编码，总的编码范围是A1~F7 A1~A9 ·符号区 B0~F7 汉字区 
+<br>GBK：《数字交换用汉字编码字符集》，它可能是单字节、双字节或者四字节编码，与GB2312编码兼容 
+<br>UTF-16：具体定义了Unicode字符在计算机中的存取方法。采用2字节来表示Unicode转化格式，它是定长的表示方法，不论什么字符都可以用两个字节表示
+<br> UTF-8： UTF-8采用一种变长技术，每个编码区域有不同的字码长度，不同的字符可以由1~6个字节组成。 如果一个字节，最高位为0，表示这是一个ASCII字符<br>（00~7F） 如果一个字节，以11开头，连续的1的个数暗示这个字符的字节数
+<br>链接：https://www.jianshu.com/p/54a3b6988368
+<br>ü utf-8编码中的中文占几个字节；int型几个字节？
+<br>utf-8的编码规则：
+<br>如果一个字节，最高位为0，表示这是一个ASCII字符（00~7F）
+<br>如果一个字节，以11开头，连续的1的个数暗示这个字符的字节数
+<br>一个utf8数字占1个字节
+<br>一个utf8英文字母占1个字节
 少数是汉字每个占用3个字节，多数占用4个字节。
 ü 静态代理和动态代理的区别，什么场景使用？
-静态代理通常只代理一个类，动态代理是代理一个接口下的多个实现类。 
-静态代理事先知道要代理的是什么，而动态代理不知道要代理什么东西，只有在运行时才知道。 
-动态代理是实现JDK里的InvocationHandler接口的invoke方法，但注意的是代理的是接口，也就是你的业务类必须要实现接口，通过Proxy里的newProxyInstance得到代理对象。 
-还有一种动态代理CGLIB，代理的是类，不需要业务类继承接口，通过派生的子类来实现代理。通过在运行时，动态修改字节码达到修改类的目的。
-原文：https://blog.csdn.net/Xinyeshuaiqi/article/details/80673008 
+<br>静态代理通常只代理一个类，动态代理是代理一个接口下的多个实现类。 
+<br>静态代理事先知道要代理的是什么，而动态代理不知道要代理什么东西，只有在运行时才知道。 
+动态代理是实现JDK里的InvocationHandler接口的invoke方法，但注意的是代理的是接口，也就是你的业务类必须要实现接口，<br>。 
+<br>还有一种动态代理CGLIB，代理的是类，不需要业务类继承接口，通过派生的子类来实现代理。通过在运行时，动态修改字节码达到修改类的目的。
+<br>原文：https://blog.csdn.net/Xinyeshuaiqi/article/details/80673008 
 
-ü Java的异常体系
-Java异常架构图
+<br>ü Java的异常体系
+<br>Java异常架构图
 
-Throwable Throwable是 Java 语言中所有错误或异常的超类。 Throwable包含两个子类: Error 和 Exception 。它们通常用于指示发生了异常情况。 Throwable包含了其线程创建时线程执行堆栈的快照，它提供了printStackTrace()等接口用于获取堆栈跟踪数据等信息。
-Exception Exception及其子类是 Throwable 的一种形式，它指出了合理的应用程序想要捕获的条件。
-RuntimeException RuntimeException是那些可能在 Java 虚拟机正常运行期间抛出的异常的超类。 编译器不会检查RuntimeException异常。 例如，除数为零时，抛出ArithmeticException异常。RuntimeException是ArithmeticException的超类。当代码发生除数为零的情况时，倘若既"没有通过throws声明抛出ArithmeticException异常"，也"没有通过try...catch...处理该异常"，也能通过编译。这就是我们所说的"编译器不会检查RuntimeException异常"！ 如果代码会产生RuntimeException异常，则需要通过修改代码进行避免。 例如，若会发生除数为零的情况，则需要通过代码避免该情况的发生！
+<br>Throwable Throwable是 Java 语言中所有错误或异常的超类。 Throwable包含两个子类: Error 和 Exception 。它们通常用于指示发生了异常情况。 Throwable包含了其线程创建时线程执行堆栈的快照，它提供了printStackTrace()等接口用于获取堆栈跟踪数据等信息。
+<br>Exception Exception及其子类是 Throwable 的一种形式，它指出了合理的应用程序想要捕获的条件。
+<br>RuntimeException RuntimeException是那些可能在 Java 虚拟机正常运行期间抛出的异常的超类。 编译器不会检查RuntimeException异常。 例如，除数为零时，抛出ArithmeticException异常。RuntimeException是ArithmeticException的超类。当代码发生除数为零的情况时，倘若既"没有通过throws声明抛出ArithmeticException异常"，也"没有通过try...catch...处理该异常"，也能通过编译。这就是我们所说的"编译器不会检查RuntimeException异常"！ 如果代码会产生RuntimeException异常，则需要通过修改代码进行避免。 例如，若会发生除数为零的情况，则需要通过代码避免该情况的发生！
 Error 和Exception一样， Error也是Throwable的子类。 它用于指示合理的应用程序不应该试图捕获的严重问题，大多数这样的错误都是异常条件。 和RuntimeException一样， 编译器也不会检查Error。
-Java将可抛出(Throwable)的结构分为三种类型： 被检查的异常(Checked Exception)，运行时异常(RuntimeException)和错误(Error)。
-(01) 运行时异常 定义 : RuntimeException及其子类都被称为运行时异常。 特点 : Java编译器不会检查它。 也就是说，当程序中可能出现这类异常时，倘若既"没有通过throws声明抛出它"，也"没有用try-catch语句捕获它"，还是会编译通过。例如，除数为零时产生的ArithmeticException异常，数组越界时产生的IndexOutOfBoundsException异常，fail-fail机制产生的ConcurrentModificationException异常等，都属于运行时异常。 虽然Java编译器不会检查运行时异常，但是我们也可以通过throws进行声明抛出，也可以通过try-catch对它进行捕获处理。 如果产生运行时异常，则需要通过修改代码来进行避免。 例如，若会发生除数为零的情况，则需要通过代码避免该情况的发生！
-(02) 被检查的异常 定义 : Exception类本身，以及Exception的子类中除了"运行时异常"之外的其它子类都属于被检查异常。 特点 : Java编译器会检查它。 此类异常，要么通过throws进行声明抛出，要么通过try-catch进行捕获处理，否则不能通过编译。例如，CloneNotSupportedException就属于被检查异常。当通过clone()接口去克隆一个对象，而该对象对应的类没有实现Cloneable接口，就会抛出CloneNotSupportedException异常。 被检查异常通常都是可以恢复的。
-(03) 错误 定义 : Error类及其子类。 特点 : 和运行时异常一样，编译器也不会对错误进行检查。 当资源不足、约束失败、或是其它程序无法继续运行的条件发生时，就产生错误。程序本身无法修复这些错误的。例如，VirtualMachineError就属于错误。 按照Java惯例，我们是不应该是实现任何新的Error子类的！
+<br>Java将可抛出(Throwable)的结构分为三种类型： 被检查的异常(Checked Exception)，运行时异常(RuntimeException)和错误(Error)。
+<br>(01) 运行时异常 定义 : RuntimeException及其子类都被称为运行时异常。 特点 : Java编译器不会检查它。 也就是说，当程序中可能出现这类异常时，倘若既"没有通过throws声明抛出它"，也"没有用try-catch语句捕获它"，还是会编译通过。例如，除数为零时产生的ArithmeticException异常，数组越界时产生的IndexOutOfBoundsException异常，fail-fail机制产生的ConcurrentModificationException异常等，都属于运行时异常。 虽然Java编译器不会检查运行时异常，但是我们也可以通过throws进行声明抛出，也可以通过try-catch对它进行捕获处理。 如果产生运行时异常，则需要通过修改代码来进行避免。 例如，若会发生除数为零的情况，则需要通过代码避免该情况的发生！
+<br>(02) 被检查的异常 定义 : Exception类本身，以及Exception的子类中除了"运行时异常"之外的其它子类都属于被检查异常。 特点 : Java编译器会检查它。 此类异常，要么通过throws进行声明抛出，要么通过try-catch进行捕获处理，否则不能通过编译。例如，CloneNotSupportedException就属于被检查异常。当通过clone()接口去克隆一个对象，而该对象对应的类没有实现Cloneable接口，就会抛出CloneNotSupportedException异常。 被检查异常通常都是可以恢复的。
+<br>(03) 错误 定义 : Error类及其子类。 特点 : 和运行时异常一样，编译器也不会对错误进行检查。 当资源不足、约束失败、或是其它程序无法继续运行的条件发生时，就产生错误。程序本身无法修复这些错误的。例如，VirtualMachineError就属于错误。 按照Java惯例，我们是不应该是实现任何新的Error子类的！
 对于上面的3种结构，我们在抛出异常或错误时，到底该哪一种？《Effective Java》中给出的建议是： 对于可以恢复的条件使用被检查异常，对于程序错误使用运行时异常。
-ü 谈谈你对解析与分派的认识。
-1.方法在程序真正运行之前就有一个可确定的调用版本，并且这个方法的调用版本在运行期间是不可变的，即“编译时可知，运行不可以变”，这类目标的方法的调用称之为解析
-2.解析调用一定是个静态的过程，在编译期就完全确定，在类加载的解析阶段就将涉及的符号引用全部转变为可以确定的直接引用，不会延迟到运行期再去完成。而分派（Dispatch）调用则可能是静态的也可能是动的。于是分派方式就有静态分派和动态分派。
+<br>ü 谈谈你对解析与分派的认识。
+<br>1.方法在程序真正运行之前就有一个可确定的调用版本，并且这个方法的调用版本在运行期间是不可变的，即“编译时可知，运行不可以变”，这类目标的方法的调用称之为解析
+<br>2.解析调用一定是个静态的过程，在编译期就完全确定，在类加载的解析阶段就将涉及的符号引用全部转变为可以确定的直接引用，不会延迟到运行期再去完成。而分派（Dispatch）调用则可能是静态的也可能是动的。于是分派方式就有静态分派和动态分派。
 静态分派的最直接的解释是在重载的时候是通过参数的静态类型而不是实际类型作为判断依据的。因此在编译阶段，Javac编译器会根据参数的静态类型决定使用哪个重载版本。
 显然这里不可能根据静态类型来决定调用那个方法。导致这个现象很明显的原因是因为这两个变量的实际类型不一样，jvm根据实际类型来分派方法执行版本。
 链接：https://www.jianshu.com/p/985534b21089
-ü 修改对象A的equals方法的签名，那么使用HashMap存放这个对象实例的时候，会调用哪个equals方法？
+<br>ü 修改对象A的equals方法的签名，那么使用HashMap存放这个对象实例的时候，会调用哪个equals方法？
 会调用对象对象的equals方法。
-“==”如果是基本类型的话就是看他们的数据值是否相等就可以。
-如果是引用类型的话，比较的是栈内存局部变量表中指向堆内存中的指针的值是否相等
-“equals”如果对象的equals方法没有重写的话，equals方法和“==”是同一种。
-hashcod是返回对象实例内存地址的hash映射。
-理论上所有对象的hash映射都是不相同的。
+<br>“==”如果是基本类型的话就是看他们的数据值是否相等就可以。
+<br>如果是引用类型的话，比较的是栈内存局部变量表中指向堆内存中的指针的值是否相等
+<br>“equals”如果对象的equals方法没有重写的话，equals方法和“==”是同一种。
+<br>hashcod是返回对象实例内存地址的hash映射。
+<br>理论上所有对象的hash映射都是不相同的。
 问题：
-1.你用过hashmap么？
+<br>1.你用过hashmap么？
 答：是的，然后回答HashMap的一些特性，譬如HashMap可以接受null键值和值，而Hashtable则不能；HashMap是非synchronized;HashMap很快；以及HashMap储存的是键值对等等。
-2.你知道hashmap的工作原理么？
+<br>2.你知道hashmap的工作原理么？
 答：HashMap是基于hashing的原理，我们使用put(key, value)存储对象到HashMap中，使用get(key)从HashMap中获取对象。当我们给put()方法传递键和值时，我们先对键调用hashCode()方法，返回的hashCode用于找到bucket位置来储存Entry对象。”这里关键点在于指出，HashMap是在bucket中储存键对象和值对象，作为Map.Entry。这一点有助于理解获取对象的逻辑。如果你没有意识到这一点，或者错误的认为仅仅只在bucket中存储值的话，你将不会回答如何从HashMap中获取对象的逻辑。这个答案相当的正确，也显示出面试者确实知道hashing以及HashMap的工作原理。但是这仅仅是故事的开始，当面试官加入一些Java程序员每天要碰到的实际场景的时候，错误的答案频现。
 for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
 System.out.println(entry.getKey() + ":" + entry.getValue());
 }
-3.当两个对象的hashcode相同会发生什么？
+<br>3.当两个对象的hashcode相同会发生什么？
 因为即使hashcode相同，但是equals不同。
 因为hashcode相同，所以它们的bucket位置相同，‘碰撞’会发生。因为HashMap使用链表存储对象，这个Entry(包含有键值对的Map.Entry对象)会存储在链表中。
-4.如果两个键的hashcode相同，你如何获取值对象？
+<br>4.如果两个键的hashcode相同，你如何获取值对象？
 当我们调用get()方法，HashMap会使用键对象的hashcode找到bucket位置，然后获取值对象。
-5.面试官提醒他如果有两个值对象储存在同一个bucket？
+<br>5.面试官提醒他如果有两个值对象储存在同一个bucket？
 将会遍历链表直到找到值对象
-6.因为你并没有值对象去比较，你是如何确定确定找到值对象的？
+<br>6.因为你并没有值对象去比较，你是如何确定确定找到值对象的？
 找到bucket位置之后，会调用keys.equals()方法去找到链表中正确的节点，最终找到要找的值对象。
 --------------------------------------------------------------------------------
 一些优秀的开发者会指出使用不可变的、声明作final的对象，并且采用合适的equals()和hashCode()方法的话，将会减少碰撞的发生，提高效率。不可变性使得能够缓存不同键的hashcode，这将提高整个获取对象的速度，使用String，Interger这样的wrapper类作为键是非常好的选择。
 
 链接：https://www.jianshu.com/p/985534b21089
 
-ü Java中实现多态的机制是什么？
+<br>ü Java中实现多态的机制是什么？
 多态性是指允许不同子类型的对象对同一消息作出不同的响应。简单的说就是用同样的对象引用调用同样的方法但是做了不同的事情。多态性分为编译时的多态性和运行时的多态性。如果将对象的方法视为对象向外界提供的服务，那么运行时的多态性可以解释为：当A系统访问B系统提供的服务时，B系统有多种提供服务的方式，但一切对A系统来说都是透明的（就像电动剃须刀是A系统，它的供电系统是B系统，B系统可以使用电池供电或者用交流电，甚至还有可能是太阳能，A系统只会通过B类对象调用供电的方法，但并不知道供电系统的底层实现是什么，究竟通过何种方式获得了动力）。方法重载（overload）实现的是编译时的多态性（也称为前绑定），而方法重写（override）实现的是运行时的多态性（也称为后绑定）。运行时的多态是面向对象最精髓的东西，要实现多态需要做两件事：1. 方法重写（子类继承父类并重写父类中已有的或抽象的方法）；2. 对象造型（用父类型引用引用子类型对象，这样同样的引用调用同样的方法就会根据子类对象的不同而表现出不同的行为）。
 流程：调用方法时，虚拟机通过对象引用得到方法区中类型信息的方法表的指针入口，查询类的方法表 ，根据实例方法的符号引用解析出该方法在方法表的偏移量，子类对象声明为父类类型时，形式上调用的是父类的方法，此时虚拟机会从实际的方法表中找到方法地址，从而定位到实际类的方法。 注：所有引用为父类，但方法区的类型信息中存放的是子类的信息，所以调用的是子类的方法表。
-ü 如何将一个Java对象序列化到文件里？
+<br>ü 如何将一个Java对象序列化到文件里？
 1）对象需要实现Seralizable接口
 public class StudentBean implements Serializable {
 ······
@@ -269,7 +271,7 @@ e.printStackTrace();
 e.printStackTrace();
 }
 链接：https://www.jianshu.com/p/cb970e5cd5b8
-ü 说说你对Java反射的理解
+<br>ü 说说你对Java反射的理解
 JAVA反射机制是在运行状态中, 对于任意一个类, 都能够知道这个类的所有属性和方法; 对于任意一个对象, 都能够调用它的任意一个方法和属性; 这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制.
 主要作用有三：
 运行时取得类的方法和字段的相关信息。
@@ -522,13 +524,13 @@ public String replace(char oldChar, char newChar) {
     return this;
 }
 
-从上面的三个方法可以看出，无论是sub操、concat还是replace操作都不是在原有的字符串上进行的，而是重新生成了一个新的字符串对象。也就是说进行这些操作后，最原始的字符串并没有被改变。
-在这里要永远记住一点：“String对象一旦被创建就是固定不变的了，对String对象的任何改变都不影响到原对象，相关的任何change操作都会生成新的对象”。
+<br><br>，无论是sub操、concat还是replace操作都不是在原有的字符串上进行的，而是重新生成了一个新的字符串对象。也就是说进行这些操作<br><br>后，最原始的字符串并没有被改变。
+<br><br>在这里要永远记住一点：“String对象一旦被创建就是固定不变的了，对String对象的任何改变都不影响到原对象，相关的任何change操作都会生成新的对象”。
 二、字符串常量池
-      我们知道字符串的分配和其他对象分配一样，是需要消耗高昂的时间和空间的，而且字符串我们使用的非常多。JVM为了提高性能和减少内存的开销，在实例化字符串的时候进行了一些优化：使用字符串常量池。每当我们创建字符串常量时，JVM会首先检查字符串常量池，如果该字符串已经存在常量池中，那么就直接返回常量池中的实例引用。如果字符串不存在常量池中，就会实例化该字符串并且将其放到常量池中。由于String字符串的不可变性我们可以十分肯定常量池中一定不存在两个相同的字符串（这点对理解上面至关重要）。
-Java中的常量池，实际上分为两种形态：静态常量池和运行时常量池。
-所谓静态常量池，即*.class文件中的常量池，class文件中的常量池不仅仅包含字符串(数字)字面量，还包含类、方法的信息，占用class文件绝大部分空间。
-而运行时常量池，则是jvm虚拟机在完成类装载操作后，将class文件中的常量池载入到内存中，并保存在方法区中，我们常说的常量池，就是指方法区中的运行时常量池。
+      我们知道字符串的分配和其他对象分配一样，是需要消耗高昂的时间和空间的，而且字符串我们使用的非常多。JVM为了提高性能和减少内存的开销，在实例化字<br><br>符串的时候进行了一些优化：使用字符串常量池。每当我们创建字符串常量时，JVM会首先检查字符串常量池，如果该字符串已经存在常量池中，那么就直接返回常量池<br><br>中的实例引用。如果字符串不存在常量池中，就会实例化该字符串并且将其放到常量池中。由于String字符串的不可变性我们可以十分肯定常量池中一定不存在两个相同<br><br>的字符串（这点对理解上面至关重要）。
+<br><br>Java中的常量池，实际上分为两种形态：静态常量池和运行时常量池。
+<br><br>所谓静态常量池，即*.class文件中的常量池，class文件中的常量池不仅仅包含字符串(数字)字面量，还包含类、方法的信息，占用class文件绝大部分空间。
+<br><br>而运行时常量池，则是jvm虚拟机在完成类装载操作后，将class文件中的常量池载入到内存中，并保存在方法区中，我们常说的常量池，就是指方法区中的运行时常量<br><br>池。
 来看下面的程序：
 String a = "chenssy";
 String b = "chenssy";
@@ -606,16 +608,16 @@ s0还是常量池中"helloworld”的引用，s1因为无法在编译期确定�
 /**
  * 继续-编译期无法确定
  */
-public void test5(){
-    String str1="abc";   
+<br>public void test5(){
+ <br>   String str1="abc";   
     String str2="def";   
-    String str3=str1+str2;
-    System.out.println("===========test5============");
-    System.out.println(str3=="abcdef"); //false
+<br>    String str3=str1+str2;
+<br>    System.out.println("===========test5============");
+<br>    System.out.println(str3=="abcdef"); //false
 }
 
-执行上述代码，结果为：false。
-分析：因为str3指向堆中的"abcdef"对象，而"abcdef"是字符串池中的对象，所以结果为false。JVM对String str="abc"对象放在常量池中是在编译时做的，而String str3=str1+str2是在运行时刻才能知道的。new对象也是在运行时才做的。而这段代码总共创建了5个对象，字符串池中两个、堆中三个。+运算符会在堆中建立来两个String对象，这两个对象的值分别是"abc"和"def"，也就是说从字符串池中复制这两个值，然后在堆中创建两个对象，然后再建立对象str3,然后将"abcdef"的堆地址赋给str3。
+<br>执行上述代码，结果为：false。
+<br>分析：因为str3指向堆中的"abcdef"对象，而"abcdef"是字符串池中的对象，所以结果为false。JVM对String str="abc"对象放在常量池中是在编译时做的，而String str3=str1+str2是在运行时刻才能知道的。new对象也是在运行时才做的。而这段代码总共创建了5个对象，字符串池中两个、堆中三个。+运算符会在堆中建立<br>来两个String对象，这两个对象的值分别是"abc"和"def"，也就是说从字符串池中复制这两个值，然后在堆中创建两个对象，然后再建立对象str3,然后将"abcdef"的堆地址赋给str3。
 步骤： 
 1)栈中开辟一块中间存放引用str1，str1指向池中String常量"abc"。 
 2)栈中开辟一块中间存放引用str2，str2指向池中String常量"def"。 
@@ -626,44 +628,44 @@ public void test5(){
 例子6：
 
 /**
- * 编译期优化
+<br> * 编译期优化
  */
-public void test6(){
-    String s0 = "a1"; 
-    String s1 = "a" + 1; 
-    System.out.println("===========test6============");
-    System.out.println((s0 == s1)); //result = true  
-    String s2 = "atrue"; 
+<br>public void test6(){
+ <br>   String s0 = "a1"; 
+ <br>   String s1 = "a" + 1; 
+ <br>   System.out.println("===========test6============");
+ <br>   System.out.println((s0 == s1)); //result = true  
+ <br>   String s2 = "atrue"; 
     String s3= "a" + "true"; 
-    System.out.println((s2 == s3)); //result = true  
-    String s4 = "a3.4"; 
-    String s5 = "a" + 3.4; 
-    System.out.println((s4 == s5)); //result = true
+<br>    System.out.println((s2 == s3)); //result = true  
+ <br>   String s4 = "a3.4"; 
+<br>    String s5 = "a" + 3.4; 
+<br>    System.out.println((s4 == s5)); //result = true
 }
 
-执行上述代码，结果为：true、true、true。
-分析：在程序编译期，JVM就将常量字符串的"+"连接优化为连接后的值，拿"a" + 1来说，经编译器优化后在class中就已经是a1。在编译期其字符串常量的值就确定下来，故上面程序最终的结果都为true。
-例子7：
+<br>执行上述代码，结果为：true、true、true。
+<br>分析：在程序编译期，JVM就将常量字符串的"+"连接优化为连接后的值，拿"a" + 1来说，经编译器优化后在class中就已经是a1。在编译期其字符串常量的值就确定下<br>来，故上面程序最终的结果都为true。
+<br>例子7：
 
-/**
- * 编译期无法确定
- */
-public void test7(){
-    String s0 = "ab"; 
-    String s1 = "b"; 
-    String s2 = "a" + s1; 
-    System.out.println("===========test7============");
-    System.out.println((s0 == s2)); //result = false
-}
-
-执行上述代码，结果为：false。
-分析：JVM对于字符串引用，由于在字符串的"+"连接中，有字符串引用存在，而引用的值在程序编译期是无法确定的，即"a" + s1无法被编译器优化，只有在程序运行期来动态分配并将连接后的新地址赋给s2。所以上面程序的结果也就为false。
-例子8：
-
-/**
- * 比较字符串常量的“+”和字符串引用的“+”的区别
- */
-public void test8(){
+<br>/**
+<br> * 编译期无法确定
+<br> */
+<br>public void test7(){
+<br>    String s0 = "ab"; 
+<br> <br>   String s1 = "b"; 
+<br>    String s2 = "a" + s1; 
+<br>    System.out.println("===========test7============");
+<br>    System.out.println((s0 == s2)); //result = false
+<br>}
+<br>
+<br>执行上述代码，结果为：false。
+<br>分析：JVM对于字符串引用，由于在字符串的"+"连接中，有字符串引用存在，而引用的值在程序编译期是无法确定的，即"a" + s1无法被编译器优化，只有在程序运行<br>期来动态分配并将连接后的新地址赋给s2。所以上面程序的结果也就为false。
+<br>例子8：
+<br>
+<br>/**
+<br> * 比较字符串常量的“+”和字符串引用的“+”的区别
+<br> */
+<br>public void test8(){
     String test="javalanguagespecification";
     String str="java";
     String str1="language";
